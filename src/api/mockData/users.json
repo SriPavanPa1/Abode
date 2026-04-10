@@ -1,0 +1,17 @@
+[
+  { "id": "u1", "name": "Rajesh Kumar", "email": "superadmin@abode.com", "phone": "9876543210", "role": "super_admin", "apartment_id": null, "created_at": "2024-01-01T10:00:00Z" },
+  { "id": "u2", "name": "Priya Sharma", "email": "admin@abode.com", "phone": "9876543211", "role": "admin", "apartment_id": "apt1", "created_at": "2024-01-15T10:00:00Z" },
+  { "id": "u3", "name": "Amit Patel", "email": "resident@abode.com", "phone": "9876543212", "role": "resident", "apartment_id": "apt1", "flat_id": "f1", "created_at": "2024-02-01T10:00:00Z" },
+  { "id": "u4", "name": "Deepika Nair", "email": "deepika@abode.com", "phone": "9876543213", "role": "resident", "apartment_id": "apt1", "flat_id": "f2", "created_at": "2024-02-05T10:00:00Z" },
+  { "id": "u5", "name": "Sanjay Gupta", "email": "sanjay@abode.com", "phone": "9876543214", "role": "resident", "apartment_id": "apt1", "flat_id": "f3", "created_at": "2024-02-10T10:00:00Z" },
+  { "id": "u6", "name": "Meera Reddy", "email": "meera@abode.com", "phone": "9876543215", "role": "resident", "apartment_id": "apt1", "flat_id": "f5", "created_at": "2024-02-15T10:00:00Z" },
+  { "id": "u7", "name": "Vikram Singh", "email": "vikram@abode.com", "phone": "9876543216", "role": "resident", "apartment_id": "apt1", "flat_id": "f6", "created_at": "2024-03-01T10:00:00Z" },
+  { "id": "u8", "name": "Ananya Das", "email": "ananya@abode.com", "phone": "9876543217", "role": "resident", "apartment_id": "apt1", "flat_id": "f7", "created_at": "2024-03-05T10:00:00Z" },
+  { "id": "u9", "name": "Ravi Menon", "email": "ravi@abode.com", "phone": "9876543218", "role": "resident", "apartment_id": "apt1", "flat_id": "f8", "created_at": "2024-03-10T10:00:00Z" },
+  { "id": "u10", "name": "Kavitha Iyer", "email": "kavitha@abode.com", "phone": "9876543219", "role": "resident", "apartment_id": "apt1", "flat_id": "f9", "created_at": "2024-03-15T10:00:00Z" },
+  { "id": "u11", "name": "Suresh Babu", "email": "suresh@abode.com", "phone": "9876543220", "role": "manager", "apartment_id": "apt1", "created_at": "2024-01-20T10:00:00Z" },
+  { "id": "u12", "name": "Lakshmi Rao", "email": "lakshmi@abode.com", "phone": "9876543221", "role": "reception", "apartment_id": "apt1", "created_at": "2024-02-01T10:00:00Z" },
+  { "id": "u13", "name": "Arun Verma", "email": "arun@abode.com", "phone": "9876543222", "role": "admin", "apartment_id": "apt2", "created_at": "2024-03-20T10:00:00Z" },
+  { "id": "u14", "name": "Neha Kapoor", "email": "neha@abode.com", "phone": "9876543223", "role": "resident", "apartment_id": "apt2", "flat_id": "f13", "created_at": "2024-04-01T10:00:00Z" },
+  { "id": "u15", "name": "Karthik Sundaram", "email": "karthik@abode.com", "phone": "9876543224", "role": "resident", "apartment_id": "apt2", "flat_id": "f14", "created_at": "2024-04-05T10:00:00Z" }
+]

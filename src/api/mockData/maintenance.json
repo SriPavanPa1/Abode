@@ -1,0 +1,21 @@
+[
+  { "id": "m1", "apartment_id": "apt1", "flat_id": "f1", "month": "2026-01", "amount": 4500, "status": "paid", "paid_date": "2026-01-05T10:00:00Z", "due_date": "2026-01-10" },
+  { "id": "m2", "apartment_id": "apt1", "flat_id": "f1", "month": "2026-02", "amount": 4500, "status": "paid", "paid_date": "2026-02-08T10:00:00Z", "due_date": "2026-02-10" },
+  { "id": "m3", "apartment_id": "apt1", "flat_id": "f1", "month": "2026-03", "amount": 4500, "status": "paid", "paid_date": "2026-03-03T10:00:00Z", "due_date": "2026-03-10" },
+  { "id": "m4", "apartment_id": "apt1", "flat_id": "f1", "month": "2026-04", "amount": 4500, "status": "pending", "paid_date": null, "due_date": "2026-04-10" },
+  { "id": "m5", "apartment_id": "apt1", "flat_id": "f2", "month": "2026-01", "amount": 3500, "status": "paid", "paid_date": "2026-01-08T10:00:00Z", "due_date": "2026-01-10" },
+  { "id": "m6", "apartment_id": "apt1", "flat_id": "f2", "month": "2026-02", "amount": 3500, "status": "paid", "paid_date": "2026-02-10T10:00:00Z", "due_date": "2026-02-10" },
+  { "id": "m7", "apartment_id": "apt1", "flat_id": "f2", "month": "2026-03", "amount": 3500, "status": "overdue", "paid_date": null, "due_date": "2026-03-10" },
+  { "id": "m8", "apartment_id": "apt1", "flat_id": "f2", "month": "2026-04", "amount": 3500, "status": "pending", "paid_date": null, "due_date": "2026-04-10" },
+  { "id": "m9", "apartment_id": "apt1", "flat_id": "f3", "month": "2026-01", "amount": 4500, "status": "paid", "paid_date": "2026-01-04T10:00:00Z", "due_date": "2026-01-10" },
+  { "id": "m10", "apartment_id": "apt1", "flat_id": "f3", "month": "2026-02", "amount": 4500, "status": "paid", "paid_date": "2026-02-06T10:00:00Z", "due_date": "2026-02-10" },
+  { "id": "m11", "apartment_id": "apt1", "flat_id": "f3", "month": "2026-03", "amount": 4500, "status": "paid", "paid_date": "2026-03-09T10:00:00Z", "due_date": "2026-03-10" },
+  { "id": "m12", "apartment_id": "apt1", "flat_id": "f3", "month": "2026-04", "amount": 4500, "status": "pending", "paid_date": null, "due_date": "2026-04-10" },
+  { "id": "m13", "apartment_id": "apt1", "flat_id": "f5", "month": "2026-03", "amount": 4500, "status": "overdue", "paid_date": null, "due_date": "2026-03-10" },
+  { "id": "m14", "apartment_id": "apt1", "flat_id": "f5", "month": "2026-04", "amount": 4500, "status": "pending", "paid_date": null, "due_date": "2026-04-10" },
+  { "id": "m15", "apartment_id": "apt1", "flat_id": "f6", "month": "2026-03", "amount": 3500, "status": "paid", "paid_date": "2026-03-02T10:00:00Z", "due_date": "2026-03-10" },
+  { "id": "m16", "apartment_id": "apt1", "flat_id": "f6", "month": "2026-04", "amount": 3500, "status": "paid", "paid_date": "2026-04-01T10:00:00Z", "due_date": "2026-04-10" },
+  { "id": "m17", "apartment_id": "apt1", "flat_id": "f7", "month": "2026-04", "amount": 4800, "status": "partial", "paid_date": null, "due_date": "2026-04-10" },
+  { "id": "m18", "apartment_id": "apt1", "flat_id": "f8", "month": "2026-04", "amount": 3500, "status": "pending", "paid_date": null, "due_date": "2026-04-10" },
+  { "id": "m19", "apartment_id": "apt1", "flat_id": "f9", "month": "2026-04", "amount": 3200, "status": "paid", "paid_date": "2026-04-02T10:00:00Z", "due_date": "2026-04-10" }
+]

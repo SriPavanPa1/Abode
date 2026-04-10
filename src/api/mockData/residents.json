@@ -1,0 +1,12 @@
+[
+  { "id": "r1", "user_id": "u3", "flat_id": "f1", "apartment_id": "apt1", "type": "owner", "move_in_date": "2024-02-01", "vehicle_number": "KA01AB1234", "emergency_contact": "9876500001", "family_members": 4 },
+  { "id": "r2", "user_id": "u4", "flat_id": "f2", "apartment_id": "apt1", "type": "tenant", "move_in_date": "2024-03-15", "vehicle_number": "KA01CD5678", "emergency_contact": "9876500002", "family_members": 2 },
+  { "id": "r3", "user_id": "u5", "flat_id": "f3", "apartment_id": "apt1", "type": "owner", "move_in_date": "2024-02-10", "vehicle_number": "KA01EF9012", "emergency_contact": "9876500003", "family_members": 3 },
+  { "id": "r4", "user_id": "u6", "flat_id": "f5", "apartment_id": "apt1", "type": "owner", "move_in_date": "2024-02-20", "vehicle_number": null, "emergency_contact": "9876500004", "family_members": 5 },
+  { "id": "r5", "user_id": "u7", "flat_id": "f6", "apartment_id": "apt1", "type": "tenant", "move_in_date": "2024-04-01", "vehicle_number": "KA01GH3456", "emergency_contact": "9876500005", "family_members": 2 },
+  { "id": "r6", "user_id": "u8", "flat_id": "f7", "apartment_id": "apt1", "type": "owner", "move_in_date": "2024-03-05", "vehicle_number": "KA01IJ7890", "emergency_contact": "9876500006", "family_members": 4 },
+  { "id": "r7", "user_id": "u9", "flat_id": "f8", "apartment_id": "apt1", "type": "tenant", "move_in_date": "2024-05-01", "vehicle_number": null, "emergency_contact": "9876500007", "family_members": 1 },
+  { "id": "r8", "user_id": "u10", "flat_id": "f9", "apartment_id": "apt1", "type": "owner", "move_in_date": "2024-03-15", "vehicle_number": "KA01KL2345", "emergency_contact": "9876500008", "family_members": 3 },
+  { "id": "r9", "user_id": "u14", "flat_id": "f13", "apartment_id": "apt2", "type": "owner", "move_in_date": "2024-04-01", "vehicle_number": "KA02AB1234", "emergency_contact": "9876500009", "family_members": 4 },
+  { "id": "r10", "user_id": "u15", "flat_id": "f14", "apartment_id": "apt2", "type": "tenant", "move_in_date": "2024-04-10", "vehicle_number": "KA02CD5678", "emergency_contact": "9876500010", "family_members": 2 }
+]

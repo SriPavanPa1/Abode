@@ -1,0 +1,30 @@
+[
+  { "id": "c1", "apartment_id": "apt1", "flat_id": "f1", "raised_by": "u3", "raised_by_name": "Amit Patel", "title": "Water leakage in bathroom ceiling", "description": "There is continuous water seepage from the bathroom ceiling, likely from the flat above. The paint is peeling off and there is a musty smell. This has been going on for 2 weeks now.", "category": "Plumbing", "priority": "high", "status": "in_progress", "assigned_to": "u11", "assigned_to_name": "Suresh Babu", "created_at": "2026-03-28T09:00:00Z", "updated_at": "2026-04-02T14:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-03-28T09:00:00Z", "note": "Complaint registered" },
+    { "status": "in_progress", "date": "2026-04-02T14:00:00Z", "note": "Plumber assigned, inspection scheduled for April 4" }
+  ]},
+  { "id": "c2", "apartment_id": "apt1", "flat_id": "f2", "raised_by": "u4", "raised_by_name": "Deepika Nair", "title": "Noisy neighbors – Late night disturbance", "description": "The flat above (A-301) plays loud music past midnight regularly, especially on weekends. Have requested them personally but no improvement. Need management intervention.", "category": "Nuisance", "priority": "medium", "status": "open", "assigned_to": null, "assigned_to_name": null, "created_at": "2026-04-05T22:00:00Z", "updated_at": "2026-04-05T22:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-04-05T22:00:00Z", "note": "Complaint registered" }
+  ]},
+  { "id": "c3", "apartment_id": "apt1", "flat_id": "f5", "raised_by": "u6", "raised_by_name": "Meera Reddy", "title": "Broken gate at Block C entrance", "description": "The automatic gate at Block C entrance has been malfunctioning for the past week. It gets stuck halfway and makes a grinding noise. Security concerns as it stays open at night.", "category": "Security", "priority": "urgent", "status": "in_progress", "assigned_to": "u11", "assigned_to_name": "Suresh Babu", "created_at": "2026-04-01T08:00:00Z", "updated_at": "2026-04-03T10:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-04-01T08:00:00Z", "note": "Complaint registered" },
+    { "status": "in_progress", "date": "2026-04-03T10:00:00Z", "note": "Gate repair vendor contacted, parts ordered" }
+  ]},
+  { "id": "c4", "apartment_id": "apt1", "flat_id": "f6", "raised_by": "u7", "raised_by_name": "Vikram Singh", "title": "Stray dogs entering premises", "description": "Stray dogs have been entering the apartment complex through the back gate. They leave a mess in the garden area and are sometimes aggressive. Need to fix the back gate gap.", "category": "Security", "priority": "medium", "status": "resolved", "assigned_to": "u11", "assigned_to_name": "Suresh Babu", "created_at": "2026-03-15T07:00:00Z", "updated_at": "2026-03-22T16:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-03-15T07:00:00Z", "note": "Complaint registered" },
+    { "status": "in_progress", "date": "2026-03-17T10:00:00Z", "note": "Back gate inspection done, gap identified" },
+    { "status": "resolved", "date": "2026-03-22T16:00:00Z", "note": "Gate gap sealed, wire mesh installed. Monitoring for a week." }
+  ]},
+  { "id": "c5", "apartment_id": "apt1", "flat_id": "f7", "raised_by": "u8", "raised_by_name": "Ananya Das", "title": "Gym equipment not working", "description": "The treadmill (#3) and one of the elliptical machines in the gym have been out of order. The display on the treadmill is blank. The elliptical has a squeaking sound.", "category": "Amenities", "priority": "low", "status": "open", "assigned_to": null, "assigned_to_name": null, "created_at": "2026-04-08T18:00:00Z", "updated_at": "2026-04-08T18:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-04-08T18:00:00Z", "note": "Complaint registered" }
+  ]},
+  { "id": "c6", "apartment_id": "apt1", "flat_id": "f9", "raised_by": "u10", "raised_by_name": "Kavitha Iyer", "title": "Parking spot occupied by unknown vehicle", "description": "My allotted parking spot C-12 has been consistently occupied by a white Hyundai Creta (KA01XY9999) that doesn't belong to our block. This has been happening daily for the past 5 days.", "category": "Parking", "priority": "medium", "status": "resolved", "assigned_to": "u12", "assigned_to_name": "Lakshmi Rao", "created_at": "2026-03-25T19:00:00Z", "updated_at": "2026-03-28T11:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-03-25T19:00:00Z", "note": "Complaint registered" },
+    { "status": "in_progress", "date": "2026-03-26T09:00:00Z", "note": "Vehicle owner identified – Block D resident. Notified." },
+    { "status": "resolved", "date": "2026-03-28T11:00:00Z", "note": "Vehicle moved to correct spot. Owner warned." }
+  ]},
+  { "id": "c7", "apartment_id": "apt1", "flat_id": "f8", "raised_by": "u9", "raised_by_name": "Ravi Menon", "title": "Lift getting stuck between floors", "description": "Block B elevator has been getting stuck between 3rd and 4th floor intermittently. Happened to me twice this week. Very concerning for safety, especially for elderly residents.", "category": "Maintenance", "priority": "urgent", "status": "in_progress", "assigned_to": "u11", "assigned_to_name": "Suresh Babu", "created_at": "2026-04-06T17:00:00Z", "updated_at": "2026-04-07T09:00:00Z", "timeline": [
+    { "status": "open", "date": "2026-04-06T17:00:00Z", "note": "Complaint registered – marked urgent" },
+    { "status": "in_progress", "date": "2026-04-07T09:00:00Z", "note": "Elevator company notified. Emergency inspection scheduled for today." }
+  ]}
+]

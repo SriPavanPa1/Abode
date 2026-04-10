@@ -1,0 +1,10 @@
+[
+  { "id": "e1", "apartment_id": "apt1", "category": "Security", "description": "Monthly security guard salary", "amount": 45000, "month": "2026-04", "date": "2026-04-01", "approved_by": "u2" },
+  { "id": "e2", "apartment_id": "apt1", "category": "Electricity", "description": "Common area electricity bill", "amount": 28000, "month": "2026-04", "date": "2026-04-03", "approved_by": "u2" },
+  { "id": "e3", "apartment_id": "apt1", "category": "Water", "description": "Water supply charges", "amount": 15000, "month": "2026-04", "date": "2026-04-02", "approved_by": "u2" },
+  { "id": "e4", "apartment_id": "apt1", "category": "Cleaning", "description": "Housekeeping staff salary + supplies", "amount": 35000, "month": "2026-04", "date": "2026-04-01", "approved_by": "u2" },
+  { "id": "e5", "apartment_id": "apt1", "category": "Maintenance", "description": "Elevator maintenance contract", "amount": 12000, "month": "2026-04", "date": "2026-04-05", "approved_by": "u2" },
+  { "id": "e6", "apartment_id": "apt1", "category": "Garden", "description": "Garden maintenance and landscaping", "amount": 8000, "month": "2026-03", "date": "2026-03-01", "approved_by": "u2" },
+  { "id": "e7", "apartment_id": "apt1", "category": "Repairs", "description": "Plumbing repairs in Block B", "amount": 5500, "month": "2026-03", "date": "2026-03-15", "approved_by": "u2" },
+  { "id": "e8", "apartment_id": "apt1", "category": "Security", "description": "CCTV maintenance and repairs", "amount": 7500, "month": "2026-03", "date": "2026-03-10", "approved_by": "u2" }
+]

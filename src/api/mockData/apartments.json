@@ -1,0 +1,20 @@
+[
+  {
+    "id": "apt1",
+    "name": "Sunrise Heights",
+    "address": "42, MG Road, Koramangala, Bangalore 560034",
+    "total_blocks": 4,
+    "total_flats": 120,
+    "registered_residents": 98,
+    "created_at": "2024-01-15T10:00:00Z"
+  },
+  {
+    "id": "apt2",
+    "name": "Green Valley Residency",
+    "address": "15, HSR Layout, Sector 2, Bangalore 560102",
+    "total_blocks": 3,
+    "total_flats": 72,
+    "registered_residents": 61,
+    "created_at": "2024-03-20T10:00:00Z"
+  }
+]
