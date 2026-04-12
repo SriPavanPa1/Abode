@@ -41,7 +41,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
       {/* Mobile overlay */}
       {mobileOpen && (
         <div
-          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 'var(--z-modal-backdrop)' }}
+          style={{ position: 'fixed', inset: 0, background: 'rgba(5,8,22,0.6)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)', zIndex: 'var(--z-modal-backdrop)' }}
           onClick={onMobileClose}
         />
       )}
@@ -50,7 +50,9 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
         style={{
           width: collapsed ? 'var(--sidebar-collapsed-width)' : 'var(--sidebar-width)',
           minHeight: '100vh',
-          background: 'var(--color-bg-secondary)',
+          background: 'var(--glass-bg)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
           borderRight: '1px solid var(--color-surface-border)',
           display: 'flex',
           flexDirection: 'column',
@@ -58,6 +60,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
           flexShrink: 0,
           position: 'relative',
           zIndex: 10,
+          boxShadow: '1px 0 24px rgba(0, 0, 0, 0.15)',
         }}
         className={`sidebar ${mobileOpen ? 'sidebar--mobile-open' : ''}`}
       >
@@ -72,13 +75,14 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
           overflow: 'hidden',
         }}>
           <div style={{
-            width: 36, height: 36, borderRadius: 'var(--radius-lg)',
+            width: 38, height: 38, borderRadius: 'var(--radius-lg)',
             background: 'var(--gradient-accent)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             flexShrink: 0, fontWeight: 800, fontSize: 18, color: '#fff',
+            boxShadow: '0 4px 16px rgba(6, 214, 224, 0.3)',
           }}>A</div>
           {!collapsed && (
-            <span style={{ fontWeight: 700, fontSize: 'var(--font-size-lg)', whiteSpace: 'nowrap' }}>
+            <span style={{ fontWeight: 700, fontSize: 'var(--font-size-lg)', whiteSpace: 'nowrap', letterSpacing: '-0.02em' }}>
               Abode
             </span>
           )}
@@ -116,6 +120,8 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
                   overflow: 'hidden',
                   whiteSpace: 'nowrap',
                   textDecoration: 'none',
+                  boxShadow: isActive ? '0 0 16px rgba(6, 214, 224, 0.08)' : 'none',
+                  borderLeft: isActive ? '2px solid var(--color-accent)' : '2px solid transparent',
                 }}
                 className="nav-link"
               >
@@ -134,13 +140,17 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
           <div style={{
             display: 'flex', alignItems: 'center', gap: 'var(--space-3)',
             padding: 'var(--space-3)', borderRadius: 'var(--radius-lg)',
-            background: 'var(--color-bg-tertiary)', overflow: 'hidden',
+            background: 'rgba(255, 255, 255, 0.04)',
+            backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
+            border: '1px solid rgba(255, 255, 255, 0.05)',
+            overflow: 'hidden',
           }}>
             <div style={{
               width: 36, height: 36, borderRadius: '50%',
               background: 'var(--gradient-accent)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               flexShrink: 0, fontWeight: 700, fontSize: 13, color: '#fff',
+              boxShadow: '0 2px 8px rgba(6, 214, 224, 0.25)',
             }}>
               {getInitials(user?.name)}
             </div>
@@ -157,9 +167,10 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
             {!collapsed && (
               <button
                 onClick={logout}
-                style={{ color: 'var(--color-text-muted)', flexShrink: 0, padding: 4, borderRadius: 6 }}
+                style={{ color: 'var(--color-text-muted)', flexShrink: 0, padding: 4, borderRadius: 6, transition: 'color 150ms ease' }}
                 title={t('logout')}
                 aria-label={t('logout')}
+                className="logout-btn"
               >
                 <LogOut size={16} />
               </button>
@@ -171,13 +182,16 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
             onClick={() => setCollapsed(!collapsed)}
             style={{
               marginTop: 'var(--space-3)',
-              width: '100%', height: 32,
+              width: '100%', height: 34,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               borderRadius: 'var(--radius-md)',
               color: 'var(--color-text-muted)',
               transition: 'all var(--transition-fast)',
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.04)',
             }}
             aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+            className="collapse-btn"
           >
             {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
           </button>
@@ -204,6 +218,13 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
         .nav-link:hover {
           background: var(--color-bg-hover) !important;
           color: var(--color-text-primary) !important;
+        }
+        .collapse-btn:hover {
+          background: var(--color-bg-hover) !important;
+          color: var(--color-text-primary) !important;
+        }
+        .logout-btn:hover {
+          color: var(--color-danger) !important;
         }
       `}</style>
     </>

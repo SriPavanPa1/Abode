@@ -16,7 +16,7 @@ export default function Input({
           {label}
         </label>
       )}
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', width: '100%' }}>
         {Icon && (
           <span
             style={{
@@ -35,7 +35,7 @@ export default function Input({
         <input
           id={inputId}
           className={`form-input ${error ? 'form-input--error' : ''}`}
-          style={Icon ? { paddingLeft: '40px' } : {}}
+          style={Icon ? { paddingLeft: '40px', width: '100%' } : { width: '100%' }}
           {...props}
         />
       </div>

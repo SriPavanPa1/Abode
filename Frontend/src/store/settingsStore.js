@@ -5,7 +5,7 @@ import translations from '../utils/translations';
 const useSettingsStore = create(
   persist(
     (set, get) => ({
-      theme: 'dark', // 'dark' | 'light'
+      theme: 'light', // 'light' | 'dark'
       language: 'en', // 'en' | 'hi' | 'te'
 
       setTheme: (theme) => {

@@ -22,18 +22,20 @@ export default function App() {
           position="top-right"
           toastOptions={{
             style: {
-              background: 'var(--color-bg-elevated)',
+              background: 'var(--glass-bg)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
               color: 'var(--color-text-primary)',
-              border: '1px solid var(--color-surface-border)',
-              borderRadius: '10px',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '14px',
               fontSize: '0.875rem',
-              boxShadow: 'var(--shadow-lg)',
+              boxShadow: '0 16px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05)',
             },
             success: {
-              iconTheme: { primary: '#10b981', secondary: 'var(--color-bg-elevated)' },
+              iconTheme: { primary: '#10b981', secondary: 'transparent' },
             },
             error: {
-              iconTheme: { primary: '#ef4444', secondary: 'var(--color-bg-elevated)' },
+              iconTheme: { primary: '#f43f5e', secondary: 'transparent' },
             },
           }}
         />

@@ -9,9 +9,9 @@ import Input from '../../components/ui/Input';
 import { ROLES } from '../../utils/constants';
 
 const QUICK_LOGIN = [
-  { role: ROLES.SUPER_ADMIN, labelKey: 'superAdmin', icon: Shield, color: 'var(--color-info)', desc: 'Rajesh Kumar' },
-  { role: ROLES.ADMIN, labelKey: 'admin', icon: Building2, color: 'var(--color-accent)', desc: 'Priya Sharma' },
-  { role: ROLES.RESIDENT, labelKey: 'resident', icon: Users, color: 'var(--color-success)', desc: 'Amit Patel' },
+  { role: ROLES.SUPER_ADMIN, labelKey: 'superAdmin', icon: Shield, color: '#6366f1', desc: 'Rajesh Kumar' },
+  { role: ROLES.ADMIN, labelKey: 'admin', icon: Building2, color: '#06d6e0', desc: 'Priya Sharma' },
+  { role: ROLES.RESIDENT, labelKey: 'resident', icon: Users, color: '#10b981', desc: 'Amit Patel' },
 ];
 
 export default function LoginPage() {
@@ -55,19 +55,40 @@ export default function LoginPage() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Background decorations */}
-      <div style={{
-        position: 'absolute', top: '-20%', right: '-10%',
-        width: 600, height: 600, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
-      <div style={{
-        position: 'absolute', bottom: '-20%', left: '-10%',
-        width: 500, height: 500, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
+      {/* Animated aurora background */}
+      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+        {/* Large orbs */}
+        <div style={{
+          position: 'absolute', top: '-15%', right: '-5%',
+          width: '700px', height: '700px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(6, 214, 224, 0.12) 0%, transparent 60%)',
+          animation: 'auroraDrift 20s ease-in-out infinite',
+          filter: 'blur(60px)',
+        }} />
+        <div style={{
+          position: 'absolute', bottom: '-20%', left: '-10%',
+          width: '600px', height: '600px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 60%)',
+          animation: 'auroraDrift 25s ease-in-out infinite reverse',
+          filter: 'blur(60px)',
+        }} />
+        <div style={{
+          position: 'absolute', top: '35%', left: '50%',
+          width: '500px', height: '500px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 60%)',
+          animation: 'auroraDrift 18s ease-in-out infinite 2s',
+          filter: 'blur(70px)',
+        }} />
+        {/* Grid pattern overlay */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+        }} />
+      </div>
 
       {/* Top-right settings */}
       <div style={{
@@ -76,24 +97,29 @@ export default function LoginPage() {
       }}>
         {/* Language switcher */}
         <div style={{
-          display: 'flex', background: 'var(--color-bg-secondary)',
+          display: 'flex',
+          background: 'var(--glass-bg)',
+          backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
           border: '1px solid var(--color-surface-border)',
-          borderRadius: 'var(--radius-md)', overflow: 'hidden',
+          borderRadius: 'var(--radius-lg)', overflow: 'hidden',
         }}>
           {[{ v: 'en', l: 'EN' }, { v: 'hi', l: 'हि' }, { v: 'te', l: 'తె' }].map(({ v, l }) => (
             <button key={v} onClick={() => setLanguage(v)} style={{
               padding: '6px 10px', fontSize: 'var(--font-size-xs)', fontWeight: 600,
               color: language === v ? '#fff' : 'var(--color-text-tertiary)',
-              background: language === v ? 'var(--color-accent)' : 'transparent',
+              background: language === v ? 'var(--gradient-accent)' : 'transparent',
               transition: 'all var(--transition-fast)',
+              boxShadow: language === v ? '0 2px 8px rgba(6, 214, 224, 0.2)' : 'none',
             }}>{l}</button>
           ))}
         </div>
         {/* Theme toggle */}
         <button onClick={toggleTheme} style={{
-          width: 36, height: 36, borderRadius: 'var(--radius-md)',
+          width: 36, height: 36, borderRadius: 'var(--radius-lg)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          background: 'var(--color-bg-secondary)', border: '1px solid var(--color-surface-border)',
+          background: 'var(--glass-bg)',
+          backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)',
+          border: '1px solid var(--color-surface-border)',
           color: 'var(--color-text-tertiary)',
         }}>
           {theme === 'dark' ? '☀️' : '🌙'}
@@ -104,14 +130,15 @@ export default function LoginPage() {
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-10)' }}>
           <div style={{
-            width: 64, height: 64, borderRadius: 'var(--radius-xl)',
+            width: 72, height: 72, borderRadius: 'var(--radius-2xl)',
             background: 'var(--gradient-accent)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto var(--space-4)',
-            fontSize: 28, fontWeight: 800, color: '#fff',
-            boxShadow: 'var(--shadow-glow-lg)',
+            fontSize: 32, fontWeight: 800, color: '#fff',
+            boxShadow: '0 8px 32px rgba(6, 214, 224, 0.35), 0 0 60px rgba(6, 214, 224, 0.15)',
+            animation: 'glowPulse 4s ease-in-out infinite',
           }}>A</div>
-          <h1 style={{ fontSize: 'var(--font-size-3xl)', fontWeight: 800, marginBottom: 'var(--space-2)' }}>
+          <h1 style={{ fontSize: 'var(--font-size-4xl)', fontWeight: 800, marginBottom: 'var(--space-2)', letterSpacing: '-0.03em' }}>
             {t('appName')}
           </h1>
           <p style={{ color: 'var(--color-text-tertiary)', fontSize: 'var(--font-size-sm)' }}>
@@ -119,8 +146,25 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Login card */}
-        <div className="card">
+        {/* Login card – glass */}
+        <div style={{
+          background: 'var(--glass-bg)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+          borderRadius: 'var(--radius-2xl)',
+          padding: 'var(--space-8)',
+          boxShadow: '0 24px 64px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}>
+          {/* Top highlight line */}
+          <div style={{
+            position: 'absolute', top: 0, left: 0, right: 0, height: 1,
+            background: 'linear-gradient(90deg, transparent, rgba(6, 214, 224, 0.3), transparent)',
+            pointerEvents: 'none',
+          }} />
+
           <h2 style={{ fontSize: 'var(--font-size-xl)', marginBottom: 'var(--space-6)' }}>
             {t('signInTitle')}
           </h2>
@@ -153,9 +197,9 @@ export default function LoginPage() {
 
           {/* Divider */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', margin: 'var(--space-6) 0' }}>
-            <div style={{ flex: 1, height: 1, background: 'var(--color-surface-border)' }} />
+            <div style={{ flex: 1, height: 1, background: 'linear-gradient(90deg, transparent, var(--color-surface-border), transparent)' }} />
             <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-muted)' }}>{t('orDemoAccess')}</span>
-            <div style={{ flex: 1, height: 1, background: 'var(--color-surface-border)' }} />
+            <div style={{ flex: 1, height: 1, background: 'linear-gradient(90deg, transparent, var(--color-surface-border), transparent)' }} />
           </div>
 
           {/* Quick login */}
@@ -168,19 +212,23 @@ export default function LoginPage() {
                 style={{
                   display: 'flex', alignItems: 'center', gap: 'var(--space-4)',
                   padding: 'var(--space-3) var(--space-4)',
-                  background: 'var(--color-bg-primary)',
+                  background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid var(--color-surface-border)',
                   borderRadius: 'var(--radius-lg)',
                   cursor: 'pointer',
-                  transition: 'all var(--transition-fast)',
+                  transition: 'all var(--transition-base)',
                   textAlign: 'left',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                  width: '100%',
                 }}
                 className="quick-login-btn"
               >
                 <div style={{
-                  width: 36, height: 36, borderRadius: 'var(--radius-md)',
+                  width: 40, height: 40, borderRadius: 'var(--radius-lg)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   background: `${color}18`, color, flexShrink: 0,
+                  boxShadow: `0 0 12px ${color}25`,
                 }}>
                   <Icon size={18} />
                 </div>
@@ -201,8 +249,10 @@ export default function LoginPage() {
 
       <style>{`
         .quick-login-btn:hover:not(:disabled) {
-          border-color: var(--color-accent) !important;
-          background: var(--color-accent-subtle) !important;
+          border-color: var(--color-surface-border-glow) !important;
+          background: rgba(6, 214, 224, 0.06) !important;
+          box-shadow: 0 0 20px rgba(6, 214, 224, 0.08) !important;
+          transform: translateX(4px);
         }
       `}</style>
     </div>
